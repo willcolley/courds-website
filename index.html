@@ -563,11 +563,16 @@
       background: linear-gradient(145deg, #111114 0%, #1a1a1e 100%);
     }
     .mi-tee::before {
-      content: 'COURDS';
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 3rem;
-      letter-spacing: 0.15em;
-      color: rgba(255,255,255,0.07);
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 40%;
+      background: url('handwriting-logo.PNG') no-repeat center center;
+      background-size: contain;
+      opacity: 0.07;
+      pointer-events: none;
     }
     .mi-tee::after {
       content: '';
@@ -584,13 +589,15 @@
       background: linear-gradient(145deg, #0e0e12 0%, #181820 100%);
     }
     .mi-hoodie::before {
-      content: 'COURDS';
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.6rem;
-      letter-spacing: 0.12em;
-      color: rgba(255,255,255,0.06);
+      content: '';
       position: absolute;
       bottom: 1.5rem; right: 1.5rem;
+      width: 45%;
+      height: 25%;
+      background: url('handwriting-logo.PNG') no-repeat center right;
+      background-size: contain;
+      opacity: 0.06;
+      pointer-events: none;
     }
     .mi-hoodie::after {
       content: '';
@@ -644,14 +651,16 @@
       background: #060608;
     }
     .mi-poster::before {
-      content: 'COURDS\A 2024\A TOUR';
-      white-space: pre;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.9rem;
-      letter-spacing: 0.1em;
-      line-height: 1.05;
-      color: rgba(255,255,255,0.08);
-      text-align: center;
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 35%;
+      background: url('handwriting-logo.PNG') no-repeat center center;
+      background-size: contain;
+      opacity: 0.08;
+      pointer-events: none;
     }
     .mi-poster::after {
       content: '';
@@ -1067,10 +1076,10 @@
       transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background: url('IMG_6220.jpg') no-repeat center center;
+      background: url('woman-logo.jpg') no-repeat center center;
       background-size: contain;
       mix-blend-mode: screen;
-      opacity: 0.07;
+      opacity: 0.15;
       pointer-events: none;
       z-index: 0;
       -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
@@ -1095,7 +1104,7 @@
 
 <!-- ─── NAV ──────────────────────────────────────────────────── -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo"><img src="IMG_2064.PNG" alt="Courds"></a>
+  <a href="#hero" class="nav-logo"><img src="handwriting-logo.PNG" alt="Courds"></a>
   <ul class="nav-links">
     <li><a href="#music">Music</a></li>
     <li><a href="#shows">Live</a></li>
@@ -1109,7 +1118,7 @@
 
 <!-- mobile overlay menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-logo"><img src="IMG_2064.PNG" alt="Courds"></div>
+  <div class="mobile-menu-logo"><img src="handwriting-logo.PNG" alt="Courds"></div>
   <a href="#music"  class="m-link">Music</a>
   <a href="#shows"  class="m-link">Live</a>
   <a href="#videos" class="m-link">Videos</a>
@@ -1118,11 +1127,11 @@
 
 <!-- ─── HERO ──────────────────────────────────────────────────── -->
 <section id="hero">
-  <div class="hero-bg" id="heroBg"><img src="band pic.JPG" alt=""></div>
+  <div class="hero-bg" id="heroBg"><img src="band-pic.JPG" alt=""></div>
   <div class="hero-lines"></div>
 
   <div class="hero-content">
-    <h1 class="hero-title"><img src="IMG_2064.PNG" alt="Courds"></h1>
+    <h1 class="hero-title"><img src="handwriting-logo.PNG" alt="Courds"></h1>
     <p class="hero-tagline">Liverpool</p>
     <div class="hero-cta">
       <a href="#music" class="btn btn-primary">Music</a>
@@ -1347,7 +1356,7 @@
     <div class="footer-grid">
 
       <div>
-        <div class="footer-logo"><img src="IMG_2064.PNG" alt="Courds"></div>
+        <div class="footer-logo"><img src="handwriting-logo.PNG" alt="Courds"></div>
         <p class="footer-bio">
           Cheers for listening &mdash; Dylan, Evan, Will &amp; Isaac.
         </p>
