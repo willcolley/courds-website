@@ -439,6 +439,9 @@
       grid-template-columns: repeat(2, minmax(260px, 420px));
       gap: 1.5rem;
     }
+    @media (max-width: 640px) {
+      .music-grid { grid-template-columns: 1fr; }
+    }
 
     .music-card {
       background: var(--surface2);
