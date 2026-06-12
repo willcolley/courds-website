@@ -169,6 +169,7 @@
     /* ─── HERO ────────────────────────────────────────────────── */
     #hero {
       position: relative;
+      width: 100%;
       height: 100vh;
       min-height: 620px;
       display: flex;
@@ -219,7 +220,15 @@
       pointer-events: none;
     }
 
-    .hero-content { position: relative; z-index: 2; padding: 0 1.5rem; }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 860px;
+      padding: 0 2rem;
+      margin: 0 auto;
+      text-align: center;
+    }
 
     .hero-eyebrow {
       font-size: 0.68rem;
@@ -235,7 +244,8 @@
     }
 
     .hero-title img {
-      width: clamp(380px, 75vw, 1100px);
+      width: clamp(280px, 80%, 760px);
+      max-width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -248,7 +258,69 @@
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-signup {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-signup-label {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero-signup-form {
+      display: flex;
+      gap: 0;
+    }
+
+    .hero-signup-input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-right: none;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      padding: 0.65rem 1.1rem;
+      width: 220px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .hero-signup-input::placeholder { color: var(--dim); }
+    .hero-signup-input:focus { border-color: var(--accent); background: rgba(255,255,255,0.07); }
+
+    .hero-signup-btn {
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.65rem 1.3rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .hero-signup-btn:hover { background: var(--accent-hi); }
+    .hero-signup-btn:disabled { opacity: 0.6; cursor: default; }
+
+    .hero-signup-msg {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      min-height: 1em;
     }
 
     .hero-cta { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
@@ -1069,6 +1141,15 @@
   <div class="hero-content">
     <h1 class="hero-title"><img src="images/handwriting-logo.PNG" alt="Courds"></h1>
     <p class="hero-tagline">Liverpool</p>
+    <div class="hero-signup">
+      <p class="hero-signup-label">Join our mailing list</p>
+      <form class="hero-signup-form" id="kitSignupForm" novalidate>
+        <input type="email" name="email_address" class="hero-signup-input" placeholder="your@email.com" required autocomplete="email">
+        <button type="submit" class="hero-signup-btn">Subscribe</button>
+      </form>
+      <p class="hero-signup-msg" id="kitMsg"></p>
+    </div>
+
     <div class="hero-cta">
       <a href="#music" class="btn btn-primary">Music</a>
       <a href="#shows" class="btn btn-outline">Live</a>
@@ -1087,12 +1168,6 @@
       </a>
       <a href="https://www.instagram.com/courds._.band/" class="social-btn" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      </a>
-    </div>
-
-    <div class="hero-widgets">
-      <a href="https://store.jacarandarecords.com/collections/pre-orders/products/courds-eyes" class="hero-widget" target="_blank" rel="noopener">
-        <span class="hero-widget-caption">&lsquo;Eyes&rsquo; vinyl — available now in limited quantities via Jacaranda Records</span>
       </a>
     </div>
 
@@ -1300,6 +1375,35 @@
 
 <!-- ─── JS ────────────────────────────────────────────────────── -->
 <script>
+  // Mailing list signup
+  document.getElementById('kitSignupForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    const msg = document.getElementById('kitMsg');
+    const email = this.querySelector('input[name="email_address"]').value;
+    btn.disabled = true;
+    btn.textContent = '...';
+    try {
+      const res = await fetch('https://app.kit.com/forms/9551528/subscriptions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email_address: email })
+      });
+      if (res.ok || res.status === 200) {
+        msg.textContent = 'You\'re in — thanks!';
+        msg.style.color = '#6dbf6d';
+        this.querySelector('input').value = '';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      msg.textContent = 'Something went wrong — try again.';
+      msg.style.color = '#c84040';
+    }
+    btn.disabled = false;
+    btn.textContent = 'Subscribe';
+  });
+
   // Nav scroll state
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
