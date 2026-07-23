@@ -956,8 +956,6 @@
 
 
     /* ─── VIDEOS ─────────────────────────────────────────────── */
-    #videos { background: var(--bg); }
-
     .video-wrap {
       position: relative;
       width: 100%;
@@ -967,6 +965,7 @@
       display: block;
       text-decoration: none;
       cursor: pointer;
+      margin-top: 3rem;
     }
 
     .video-thumb {
@@ -1014,52 +1013,6 @@
       color: var(--muted);
       letter-spacing: 0.08em;
       font-style: italic;
-    }
-
-    /* ─── MERCH CAROUSEL ────────────────────────────────────── */
-    .merch-carousel {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .merch-carousel-track {
-      display: flex;
-      width: 200%;
-      height: 100%;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .merch-carousel-track img {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-      flex-shrink: 0;
-      display: block;
-    }
-
-    .merch-carousel-dots {
-      position: absolute;
-      bottom: 0.65rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 5px;
-    }
-
-    .merch-carousel-dots span {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.35);
-      transition: background 0.2s;
-      cursor: pointer;
-    }
-
-    .merch-carousel-dots span.active {
-      background: rgba(255,255,255,0.9);
     }
 
     .carousel-label {
@@ -1116,10 +1069,9 @@
 <nav id="navbar">
   <a href="#hero" class="nav-logo"><img src="images/handwriting-logo.PNG" alt="Courds"></a>
   <ul class="nav-links">
-    <li><a href="#music">Music</a></li>
     <li><a href="#shows">Live</a></li>
-    <li><a href="#videos">Videos</a></li>
-    <li><a href="#merch">Store</a></li>
+    <li><a href="#merch">Merch</a></li>
+    <li><a href="#music">Music</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -1129,10 +1081,9 @@
 <!-- mobile overlay menu -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-logo"><img src="images/handwriting-logo.PNG" alt="Courds"></div>
-  <a href="#music"  class="m-link">Music</a>
-  <a href="#shows"  class="m-link">Live</a>
-  <a href="#videos" class="m-link">Videos</a>
-  <a href="#merch"  class="m-link">Store</a>
+  <a href="#shows" class="m-link">Live</a>
+  <a href="#merch" class="m-link">Merch</a>
+  <a href="#music" class="m-link">Music</a>
 </div>
 
 <!-- ─── HERO ──────────────────────────────────────────────────── -->
@@ -1153,10 +1104,9 @@
     </div>
 
     <div class="hero-cta">
-      <a href="#music" class="btn btn-primary">Music</a>
-      <a href="#shows" class="btn btn-outline">Live</a>
-      <a href="#videos" class="btn btn-outline">Videos</a>
-      <a href="#merch" class="btn btn-outline">Store</a>
+      <a href="#shows" class="btn btn-primary">Live</a>
+      <a href="#merch" class="btn btn-outline">Merch</a>
+      <a href="#music" class="btn btn-outline">Music</a>
     </div>
     <div style="display:flex;gap:0.6rem;justify-content:center;margin-top:1.5rem;">
       <a href="https://soundcloud.com/courds" class="social-btn" title="SoundCloud" aria-label="SoundCloud" target="_blank" rel="noopener">
@@ -1180,6 +1130,101 @@
   </div>
 </section>
 
+
+<!-- ─── SHOWS ─────────────────────────────────────────────────── -->
+<section id="shows" class="has-figure">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Live</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="shows-list">
+
+      <div class="show-row reveal">
+        <div class="show-date"><div class="show-month">Aug</div><div class="show-day">09</div><div class="show-year">2026</div></div>
+        <div class="show-info">
+          <div class="show-venue">Headline &mdash; Dead Wax</div>
+          <div class="show-city">28 Adderley Street, Digbeth, Birmingham, B9 4ED</div>
+        </div>
+        <a href="https://dice.fm/event/92ra9n-courds-at-dead-wax-birmingham-9th-aug-dead-wax-digbeth-birmingham-tickets" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
+      </div>
+
+      <div class="show-row reveal">
+        <div class="show-date"><div class="show-month">Aug</div><div class="show-day">13</div><div class="show-year">2026</div></div>
+        <div class="show-info">
+          <div class="show-venue">Supporting Permanent Joy &mdash; The Cavern Club</div>
+          <div class="show-note">At their farewell gig</div>
+          <div class="show-city">10 Mathew Street, Liverpool, L2 6RE</div>
+        </div>
+        <a href="https://dice.fm/event/mxgy5w-permanent-joy-the-farewell-gig-13th-aug-the-cavern-liverpool-tickets" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
+      </div>
+
+      <div class="show-row reveal">
+        <div class="show-date"><div class="show-month">Oct</div><div class="show-day">14</div><div class="show-year">2026</div></div>
+        <div class="show-info">
+          <div class="show-venue">Supporting Humane &mdash; Lion's Den</div>
+          <div class="show-city">253 Deansgate, Manchester, M3 4EN</div>
+        </div>
+        <a href="https://reroot.live/pages/reroot-manchester-humane" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── MERCH ──────────────────────────────────────────────────── -->
+<section id="merch">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Merch</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="merch-grid">
+
+      <!-- Eyes Vinyl -->
+      <div class="merch-card reveal rd1">
+        <a href="https://store.jacarandarecords.com/collections/pre-orders/products/courds-eyes" target="_blank" rel="noopener" style="display:block;">
+          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
+            <img src="images/eyesvinyl.png" alt="'Eyes' 7-inch Vinyl" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </a>
+        <div class="merch-info">
+          <div class="merch-name">'Eyes' Vinyl</div>
+          <div class="merch-desc">£14.99 &mdash; Via Jacaranda Records</div>
+        </div>
+      </div>
+
+      <!-- T-Shirt -->
+      <div class="merch-card reveal rd2">
+        <a href="https://courdsmusic.bandcamp.com/merch/courds-original-design" target="_blank" rel="noopener" style="display:block;">
+          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
+            <img src="images/tshirt.jpg" alt="Courds T-Shirt" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </a>
+        <div class="merch-info">
+          <div class="merch-name">Courds T-Shirt</div>
+          <div class="merch-desc">£15 + postage &mdash; Via Bandcamp</div>
+        </div>
+      </div>
+
+      <!-- Demo CD -->
+      <div class="merch-card reveal rd3">
+        <a href="https://courdsmusic.bandcamp.com/album/demos" target="_blank" rel="noopener" style="display:block;">
+          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
+            <img src="images/democd.jpg" alt="Demo CD" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </a>
+        <div class="merch-info">
+          <div class="merch-name">Demo CD</div>
+          <div class="merch-desc">£5 + postage &mdash; Via Bandcamp</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ─── MUSIC ─────────────────────────────────────────────────── -->
 <section id="music">
@@ -1231,59 +1276,7 @@
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- ─── SHOWS ─────────────────────────────────────────────────── -->
-<section id="shows" class="has-figure">
-  <div class="container">
-    <div class="section-header reveal">
-      <h2 class="section-title">Live</h2>
-      <div class="section-rule"></div>
-    </div>
-
-    <div class="shows-list">
-
-      <div class="show-row reveal">
-        <div class="show-date"><div class="show-month">Aug</div><div class="show-day">09</div><div class="show-year">2026</div></div>
-        <div class="show-info">
-          <div class="show-venue">Headline &mdash; Dead Wax</div>
-          <div class="show-city">28 Adderley Street, Digbeth, Birmingham, B9 4ED</div>
-        </div>
-        <a href="https://dice.fm/event/92ra9n-courds-at-dead-wax-birmingham-9th-aug-dead-wax-digbeth-birmingham-tickets" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
-      </div>
-
-      <div class="show-row reveal">
-        <div class="show-date"><div class="show-month">Aug</div><div class="show-day">13</div><div class="show-year">2026</div></div>
-        <div class="show-info">
-          <div class="show-venue">Supporting Permanent Joy &mdash; The Cavern Club</div>
-          <div class="show-note">At their farewell gig</div>
-          <div class="show-city">10 Mathew Street, Liverpool, L2 6RE</div>
-        </div>
-        <a href="https://dice.fm/event/mxgy5w-permanent-joy-the-farewell-gig-13th-aug-the-cavern-liverpool-tickets" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
-      </div>
-
-      <div class="show-row reveal">
-        <div class="show-date"><div class="show-month">Oct</div><div class="show-day">14</div><div class="show-year">2026</div></div>
-        <div class="show-info">
-          <div class="show-venue">Supporting Humane &mdash; Lion's Den</div>
-          <div class="show-city">253 Deansgate, Manchester, M3 4EN</div>
-        </div>
-        <a href="https://reroot.live/pages/reroot-manchester-humane" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ─── VIDEOS ───────────────────────────────────────────────── -->
-<section id="videos">
-  <div class="container">
-    <div class="section-header reveal">
-      <h2 class="section-title">Videos</h2>
-      <div class="section-rule"></div>
-    </div>
     <a class="video-wrap reveal" href="https://www.youtube.com/watch?v=lfuarMuSz_E&t=1691s" target="_blank" rel="noopener">
       <img class="video-thumb" src="https://img.youtube.com/vi/lfuarMuSz_E/maxresdefault.jpg" alt="Courds live at The Jacaranda Baltic">
       <div class="video-play">
@@ -1291,59 +1284,6 @@
       </div>
     </a>
     <p class="video-caption reveal">From our set @ The Jacaranda Baltic, in January</p>
-  </div>
-</section>
-
-<!-- ─── MERCH ──────────────────────────────────────────────────── -->
-<section id="merch">
-  <div class="container">
-    <div class="section-header reveal">
-      <h2 class="section-title">Store</h2>
-      <div class="section-rule"></div>
-    </div>
-
-    <!-- Online -->
-    <div class="merch-grid" style="margin-bottom:4rem;">
-
-      <!-- Eyes Vinyl -->
-      <div class="merch-card reveal rd1">
-        <a href="https://store.jacarandarecords.com/collections/pre-orders/products/courds-eyes" target="_blank" rel="noopener" style="display:block;">
-          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
-            <img src="images/eyesvinyl.png" alt="'Eyes' 7-inch Vinyl" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </a>
-        <div class="merch-info">
-          <div class="merch-name">'Eyes' Vinyl</div>
-          <div class="merch-desc">£14.99 &mdash; Via Jacaranda Records</div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- At shows -->
-    <h3 style="font-family:Helvetica, Arial, sans-serif; font-size:0.9rem; color:var(--muted); margin-bottom:1.5rem; letter-spacing:0.12em; text-transform:uppercase;">Available at our shows</h3>
-    <div class="merch-grid">
-
-      <!-- CD -->
-      <div class="merch-card reveal rd1">
-        <div class="merch-carousel" id="cdCarousel">
-          <div class="merch-carousel-track" id="cdTrack">
-            <img src="images/cd-front.jpg" alt="Demo CD front cover">
-            <img src="images/cd-back.jpg" alt="Demo CD back cover">
-          </div>
-          <div class="merch-carousel-dots">
-            <span class="active"></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="merch-info">
-          <div class="merch-name">Demo CD</div>
-          <div class="merch-desc">£5</div>
-        </div>
-      </div>
-
-
-    </div>
   </div>
 </section>
 
@@ -1482,18 +1422,6 @@
     });
   });
 
-
-  // ── CD Carousel ─────────────────────────────────────────────
-  function cdGo(i) {
-    document.getElementById('cdTrack').style.transform = `translateX(-${i * 50}%)`;
-    document.querySelectorAll('#cdCarousel .merch-carousel-dots span').forEach((d, j) => {
-      d.classList.toggle('active', j === i);
-    });
-  }
-
-  const cdEl = document.getElementById('cdCarousel');
-  cdEl.addEventListener('mouseenter', () => cdGo(1));
-  cdEl.addEventListener('mouseleave', () => cdGo(0));
 </script>
 
 </body>
