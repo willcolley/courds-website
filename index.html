@@ -953,8 +953,13 @@
     .city-tab:hover { color: var(--accent); border-color: var(--accent); }
     .city-tab.active { color: var(--accent); border-color: var(--accent); }
 
-    .city-shows { display: none; }
-    .city-shows.active { display: block; }
+    .city-shows-wrap { display: grid; }
+    .city-shows {
+      grid-area: 1 / 1;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .city-shows.active { visibility: visible; pointer-events: auto; }
 
     #citiesEmptyMsg { position: relative; }
 
@@ -1393,24 +1398,12 @@
       <button type="button" class="city-tab" data-city="liverpool">Liverpool</button>
       <button type="button" class="city-tab" data-city="london">London</button>
       <button type="button" class="city-tab" data-city="manchester">Manchester</button>
-      <button type="button" class="city-tab" data-city="birmingham">Birmingham</button>
     </div>
 
     <div id="citiesEmptyMsg">
       <p class="city-shows-empty">Select a city above to see upcoming shows.</p>
 
       <h3 class="shows-city-heading shows-spacer">Liverpool Shows</h3>
-      <div class="shows-list shows-spacer">
-        <div class="show-row">
-          <div class="show-date"><div class="show-month">Aug</div><div class="show-day">13</div><div class="show-year">2026</div></div>
-          <div class="show-info">
-            <div class="show-venue">Supporting Permanent Joy &mdash; The Cavern Club</div>
-            <div class="show-note">At their farewell gig</div>
-            <div class="show-city">10 Mathew Street, Liverpool, L2 6RE</div>
-          </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
-        </div>
-      </div>
 
       <h4 class="shows-subheading shows-spacer">The Jacaranda Residency</h4>
       <div class="shows-list shows-spacer">
@@ -1421,7 +1414,7 @@
             <div class="show-note">Supported by BYRO</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702097" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
         <div class="show-row">
           <div class="show-date"><div class="show-month">Oct</div><div class="show-day">23</div><div class="show-year">2026</div></div>
@@ -1430,7 +1423,7 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702098" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
         <div class="show-row">
           <div class="show-date"><div class="show-month">Nov</div><div class="show-day">28</div><div class="show-year">2026</div></div>
@@ -1439,25 +1432,15 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702100" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
       </div>
     </div>
 
+    <div class="city-shows-wrap">
     <!-- Liverpool -->
     <div class="city-shows" data-city="liverpool" id="citypanel-liverpool">
       <h3 class="shows-city-heading">Liverpool Shows</h3>
-      <div class="shows-list">
-        <div class="show-row reveal">
-          <div class="show-date"><div class="show-month">Aug</div><div class="show-day">13</div><div class="show-year">2026</div></div>
-          <div class="show-info">
-            <div class="show-venue">Supporting Permanent Joy &mdash; The Cavern Club</div>
-            <div class="show-note">At their farewell gig</div>
-            <div class="show-city">10 Mathew Street, Liverpool, L2 6RE</div>
-          </div>
-          <a href="https://dice.fm/event/mxgy5w-permanent-joy-the-farewell-gig-13th-aug-the-cavern-liverpool-tickets" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
-        </div>
-      </div>
 
       <h4 class="shows-subheading">The Jacaranda Residency</h4>
       <div class="shows-list">
@@ -1468,7 +1451,7 @@
             <div class="show-note">Supported by BYRO</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702097" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
 
         <div class="show-row reveal">
@@ -1478,7 +1461,7 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702098" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
 
         <div class="show-row reveal">
@@ -1488,7 +1471,7 @@
             <div class="show-note">Supported by AUNTIE</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702100" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
       </div>
     </div>
@@ -1517,7 +1500,7 @@
             <div class="show-note">Supported by BYRO</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702097" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
         <div class="show-row">
           <div class="show-date"><div class="show-month">Oct</div><div class="show-day">23</div><div class="show-year">2026</div></div>
@@ -1526,7 +1509,7 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702098" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
         <div class="show-row">
           <div class="show-date"><div class="show-month">Nov</div><div class="show-day">28</div><div class="show-year">2026</div></div>
@@ -1535,7 +1518,7 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702100" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
       </div>
     </div>
@@ -1564,7 +1547,7 @@
             <div class="show-note">Supported by BYRO</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702097" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
         <div class="show-row">
           <div class="show-date"><div class="show-month">Oct</div><div class="show-day">23</div><div class="show-year">2026</div></div>
@@ -1573,7 +1556,7 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702098" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
         <div class="show-row">
           <div class="show-date"><div class="show-month">Nov</div><div class="show-day">28</div><div class="show-year">2026</div></div>
@@ -1582,56 +1565,10 @@
             <div class="show-note">Supported by GRAVY</div>
             <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
           </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
+          <a href="https://www.seetickets.com/event/courds-jacaranda-residency/the-jacaranda-club/3702100" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
         </div>
       </div>
     </div>
-
-    <!-- Birmingham -->
-    <div class="city-shows" data-city="birmingham" id="citypanel-birmingham">
-      <h3 class="shows-city-heading">Birmingham Shows</h3>
-      <div class="shows-list">
-        <div class="show-row reveal">
-          <div class="show-date"><div class="show-month">Aug</div><div class="show-day">09</div><div class="show-year">2026</div></div>
-          <div class="show-info">
-            <div class="show-venue">Headline &mdash; Dead Wax</div>
-            <div class="show-note shows-spacer">At their farewell gig</div>
-            <div class="show-city">28 Adderley Street, Digbeth, Birmingham, B9 4ED</div>
-          </div>
-          <a href="https://dice.fm/event/92ra9n-courds-at-dead-wax-birmingham-9th-aug-dead-wax-digbeth-birmingham-tickets" class="btn-tickets" target="_blank" rel="noopener">Get Tickets</a>
-        </div>
-      </div>
-
-      <h4 class="shows-subheading shows-spacer">The Jacaranda Residency</h4>
-      <div class="shows-list shows-spacer">
-        <div class="show-row">
-          <div class="show-date"><div class="show-month">Sep</div><div class="show-day">25</div><div class="show-year">2026</div></div>
-          <div class="show-info">
-            <div class="show-venue">Headline &mdash; The Jacaranda</div>
-            <div class="show-note">Supported by BYRO</div>
-            <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
-          </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
-        </div>
-        <div class="show-row">
-          <div class="show-date"><div class="show-month">Oct</div><div class="show-day">23</div><div class="show-year">2026</div></div>
-          <div class="show-info">
-            <div class="show-venue">Headline &mdash; The Jacaranda</div>
-            <div class="show-note">Supported by GRAVY</div>
-            <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
-          </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
-        </div>
-        <div class="show-row">
-          <div class="show-date"><div class="show-month">Nov</div><div class="show-day">28</div><div class="show-year">2026</div></div>
-          <div class="show-info">
-            <div class="show-venue">Headline &mdash; The Jacaranda</div>
-            <div class="show-note">Supported by GRAVY</div>
-            <div class="show-city">21-23 Slater Street, Liverpool, L1 4BW</div>
-          </div>
-          <a href="#" class="btn-tickets">Get Tickets</a>
-        </div>
-      </div>
     </div>
 
   </div>
@@ -1912,16 +1849,21 @@
   const cityPanels = document.querySelectorAll('.city-shows');
   const citiesEmptyMsg = document.getElementById('citiesEmptyMsg');
 
+  function selectCity(tab) {
+    cityTabs.forEach(t => t.classList.remove('active'));
+    cityPanels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel = document.getElementById('citypanel-' + tab.dataset.city);
+    if (panel) panel.classList.add('active');
+    if (citiesEmptyMsg) citiesEmptyMsg.style.display = 'none';
+  }
+
   cityTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      cityTabs.forEach(t => t.classList.remove('active'));
-      cityPanels.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      const panel = document.getElementById('citypanel-' + tab.dataset.city);
-      if (panel) panel.classList.add('active');
-      if (citiesEmptyMsg) citiesEmptyMsg.style.display = 'none';
-    });
+    tab.addEventListener('click', () => selectCity(tab));
   });
+
+  const defaultCityTab = document.querySelector('.city-tab[data-city="liverpool"]');
+  if (defaultCityTab) selectCity(defaultCityTab);
 
   // Add to cart
   document.querySelectorAll('.btn-cart').forEach(btn => {
