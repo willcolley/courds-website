@@ -941,6 +941,18 @@
     .songkick-wrap { max-width: 860px; margin: 0 auto; }
     .songkick-wrap .songkick-widget { color: var(--text); }
 
+    .lineups { margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+    .lineups-heading {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+    }
+    .lineups ul { list-style: none; margin: 0; padding: 0; }
+    .lineups li { display: flex; gap: 1rem; font-size: 0.85rem; color: var(--text); padding: 0.45rem 0; line-height: 1.5; }
+    .lineup-date {
+      flex: 0 0 4.5rem; padding-top: 0.15em; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    }
+
     .city-tabs {
       display: flex;
       flex-wrap: wrap;
@@ -1337,6 +1349,15 @@
     <div class="songkick-wrap reveal">
       <a href="https://www.songkick.com/artists/2522536" class="songkick-widget" data-theme="dark" data-track-button="on" data-detect-style="true" data-background-color="transparent" data-locale="en">Courds tour dates</a>
       <script src="https://widget-app.songkick.com/injector/2522536"></script>
+
+      <div class="lineups" id="lineups">
+        <h3 class="lineups-heading">Line-ups</h3>
+        <ul>
+          <li data-date="2026-11-16"><span class="lineup-date">16 Nov</span> Elephant's Head, London &mdash; supported by Highstone</li>
+          <li data-date="2026-11-28"><span class="lineup-date">28 Nov</span> The Jacaranda, Liverpool &mdash; supported by Auntie</li>
+          <li data-date="2026-12-12"><span class="lineup-date">12 Dec</span> Poetry Club SWG3, Glasgow &mdash; supporting Et al., with Carnality</li>
+        </ul>
+      </div>
     </div>
 
   </div>
@@ -1603,6 +1624,17 @@
   });
 
   if (announceSlides.length > 1) resetAnnounceTimer();
+
+  // Hide line-ups once the gig date has passed (and the whole box if none left)
+  (function () {
+    const box = document.getElementById('lineups');
+    if (!box) return;
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    box.querySelectorAll('li[data-date]').forEach(li => {
+      if (new Date(li.dataset.date + 'T23:59:59') < today) li.remove();
+    });
+    if (!box.querySelector('li')) box.remove();
+  })();
 
   // Add to cart
   document.querySelectorAll('.btn-cart').forEach(btn => {
