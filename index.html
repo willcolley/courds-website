@@ -212,12 +212,13 @@
     }
 
     .announce-slide-photo { background: #000; }
-    .announce-slide-photo img { border: none !important; }
+    .announce-slide-photo img { border-top: none !important; border-bottom: none !important; border-left: 1px solid #fff !important; border-right: 1px solid #fff !important; }
     @media (max-width: 640px) {
       .announce-slide-photo img {
         top: 0; left: 0; transform: none;
         width: 100%; height: 100%; max-width: none; max-height: none;
         object-fit: cover; object-position: 42% center;
+        border: none !important;
       }
     }
 
