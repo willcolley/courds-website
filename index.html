@@ -13,15 +13,15 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg:        #08080a;
-      --surface:   #101012;
-      --surface2:  #18181c;
-      --accent:    #1a5fc8;
-      --accent-hi: #2d7ae8;
-      --text:      #e8e2d8;
-      --muted:     #6a6460;
-      --dim:       #38342e;
-      --border:    #222228;
+      --bg:        #080808;
+      --surface:   #101010;
+      --surface2:  #181818;
+      --accent:    #ffffff;
+      --accent-hi: #c8c8c8;
+      --text:      #e6e6e6;
+      --muted:     #6e6e6e;
+      --dim:       #383838;
+      --border:    #222222;
     }
 
     html { scroll-behavior: smooth; }
@@ -122,7 +122,7 @@
       top: calc(100% + 0.8rem);
       left: 0;
       min-width: 150px;
-      background: rgba(8, 8, 10, 0.95);
+      background: rgba(8,8,8, 0.95);
       border: 1px solid var(--border);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
@@ -194,7 +194,7 @@
     }
 
     .announce-slide-poster {
-      background: #98c1e4;
+      background: #bbbbbb;
     }
 
     .announce-slide-poster img {
@@ -212,6 +212,7 @@
     }
 
     .announce-slide-photo { background: #000; }
+    .announce-slide-photo img, .hero-bg img { filter: grayscale(1); }
     .announce-slide-photo img { border-top: none !important; border-bottom: none !important; border-left: 1px solid #fff !important; border-right: 1px solid #fff !important; }
     @media (max-width: 640px) {
       .announce-slide-photo img {
@@ -311,8 +312,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 15% 50%,  rgba(26, 95, 200, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 85% 20%,  rgba(10, 40, 120, 0.22) 0%, transparent 55%);
+        radial-gradient(ellipse 80% 60% at 15% 50%,  rgba(88,88,88, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 85% 20%,  rgba(39,39,39, 0.22) 0%, transparent 55%);
     }
 
     /* scanline texture */
@@ -358,7 +359,7 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0 0 60px rgba(26, 95, 200, 0.55)) drop-shadow(0 0 120px rgba(26, 95, 200, 0.25));
+      filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.18)) drop-shadow(0 0 120px rgba(255, 255, 255, 0.08));
     }
 
     .hero-tagline {
@@ -394,7 +395,7 @@
     }
 
     .hero-signup-input {
-      background: rgba(8,8,10,0.45);
+      background: rgba(8,8,8,0.45);
       border: 1px solid rgba(255,255,255,0.25);
       border-right: none;
       color: var(--text);
@@ -407,12 +408,12 @@
     }
 
     .hero-signup-input::placeholder { color: rgba(255,255,255,0.5); }
-    .hero-signup-input:focus { border-color: var(--accent); background: rgba(8,8,10,0.6); }
+    .hero-signup-input:focus { border-color: var(--accent); background: rgba(8,8,8,0.6); }
 
     .hero-signup-btn {
       background: var(--accent);
       border: 1px solid var(--accent);
-      color: #fff;
+      color: #000;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.68rem;
       font-weight: 600;
@@ -493,8 +494,8 @@
       transition: all 0.22s;
     }
 
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: var(--accent-hi); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,76,26,0.25); }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-primary:hover { background: var(--accent-hi); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,255,255,0.15); }
 
     .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
     .btn-outline:hover { border-color: var(--muted); transform: translateY(-2px); }
@@ -547,7 +548,7 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1rem;
       letter-spacing: 0.18em;
-      color: rgba(255,255,255,0.9);
+      color: rgba(0,0,0,0.9);
       padding: 0 2.5rem;
     }
 
@@ -563,6 +564,7 @@
       margin: 0 2.5rem;
       opacity: 0.95;
       flex-shrink: 0;
+      filter: invert(1);
     }
 
     @keyframes tickerScroll {
@@ -658,26 +660,26 @@
     }
 
     .aa-1 {
-      background: #060810 url('images/ntfn-cover.png') no-repeat center center;
+      background: #080808 url('images/ntfn-cover.png') no-repeat center center;
       background-size: cover;
     }
 
     .aa-2 {
-      background: #060810 url('images/nightclubs-cover.png') no-repeat center center;
+      background: #080808 url('images/nightclubs-cover.png') no-repeat center center;
       background-size: cover;
     }
 
     .aa-3 {
-      background: #080900;
+      background: #080808;
     }
     .aa-3::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(90,110,10,0.45) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 30% at 80% 20%, rgba(60,80,5,0.5)   0%, transparent 45%),
-        linear-gradient(135deg, #0c0d02 0%, #060700 100%);
+        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(99,99,99,0.45) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 80% 20%, rgba(70,70,70,0.5)   0%, transparent 45%),
+        linear-gradient(135deg, #0c0c0c 0%, #060606 100%);
     }
     .aa-3::after {
       content: 'RUST SEASON';
@@ -691,16 +693,16 @@
     }
 
     .aa-4 {
-      background: #010a0a;
+      background: #080808;
     }
     .aa-4::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 55% 45% at 40% 60%, rgba(10,90,90,0.45)  0%, transparent 55%),
-        radial-gradient(ellipse 40% 30% at 75% 25%, rgba(5, 60,80,0.50)   0%, transparent 45%),
-        linear-gradient(160deg, #020f0f 0%, #010808 100%);
+        radial-gradient(ellipse 55% 45% at 40% 60%, rgba(73,73,73,0.45)  0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 75% 25%, rgba(50,50,50,0.50)   0%, transparent 45%),
+        linear-gradient(160deg, #0c0c0c 0%, #070707 100%);
     }
 
     .album-art-overlay {
@@ -797,7 +799,7 @@
     }
 
     .mi-tee {
-      background: linear-gradient(145deg, #111114 0%, #1a1a1e 100%);
+      background: linear-gradient(145deg, #111111 0%, #1a1a1a 100%);
     }
     .mi-tee::before {
       content: '';
@@ -823,7 +825,7 @@
     }
 
     .mi-hoodie {
-      background: linear-gradient(145deg, #0e0e12 0%, #181820 100%);
+      background: linear-gradient(145deg, #0e0e0e 0%, #191919 100%);
     }
     .mi-hoodie::before {
       content: '';
@@ -840,7 +842,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 50% 40% at 50% 40%, rgba(200,76,26,0.07) 0%, transparent 70%);
+      background: radial-gradient(ellipse 50% 40% at 50% 40%, rgba(99,99,99,0.07) 0%, transparent 70%);
     }
 
     .mi-vinyl {
@@ -856,7 +858,7 @@
       border-radius: 50%;
       background:
         radial-gradient(circle,
-          #2a0505 0%,    #2a0505 12%,
+          #0d0d0d 0%,    #0d0d0d 12%,
           #0d0d0d 12%,   #0d0d0d 14%,
           #111 14%,      #111 22%,
           #0a0a0a 22%,   #0a0a0a 24%,
@@ -885,7 +887,7 @@
     }
 
     .mi-poster {
-      background: #060608;
+      background: #060606;
     }
     .mi-poster::before {
       content: '';
@@ -910,7 +912,7 @@
       position: absolute;
       top: 0.8rem; right: 0.8rem;
       background: var(--accent);
-      color: #fff;
+      color: #000;
       font-size: 0.58rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -939,8 +941,8 @@
       transition: all 0.22s;
     }
 
-    .btn-cart:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .btn-cart.added  { background: #2a5a2a; border-color: #2a5a2a; color: #fff; }
+    .btn-cart:hover { background: var(--accent); border-color: var(--accent); color: #000; }
+    .btn-cart.added  { background: #4c4c4c; border-color: #4c4c4c; color: #fff; }
 
     /* ─── SHOWS ───────────────────────────────────────────────── */
     #shows {
@@ -1084,7 +1086,7 @@
       transition: all 0.22s;
     }
 
-    .btn-tickets:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-tickets:hover { background: var(--accent); border-color: var(--accent); color: #000; }
 
     @media (max-width: 580px) {
       .show-row { grid-template-columns: 80px 1fr; gap: 1rem; }
@@ -1114,7 +1116,7 @@
       width: 40px;
       height: 40px;
       border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(8,8,10,0.45);
+      background: rgba(8,8,8,0.45);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1124,7 +1126,7 @@
       flex-shrink: 0;
     }
 
-    .social-btn:hover { color: var(--text); border-color: var(--accent); background: rgba(200,76,26,0.1); }
+    .social-btn:hover { color: var(--text); border-color: var(--accent); background: rgba(255,255,255,0.06); }
     .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
 
 
@@ -1366,7 +1368,7 @@
       <!-- T-Shirt -->
       <div class="merch-card reveal rd1">
         <a href="https://courdsmusic.bandcamp.com/merch/courds-original-design" target="_blank" rel="noopener" style="display:block;">
-          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
+          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0a;">
             <img src="images/tshirt.jpg" alt="Courds T-Shirt" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </a>
@@ -1379,7 +1381,7 @@
       <!-- Demo CD -->
       <div class="merch-card reveal rd2">
         <a href="https://courdsmusic.bandcamp.com/album/demos" target="_blank" rel="noopener" style="display:block;">
-          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
+          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0a;">
             <img src="images/democd.jpg" alt="Demo CD" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </a>
@@ -1392,7 +1394,7 @@
       <!-- Eyes Vinyl -->
       <div class="merch-card reveal rd3">
         <a href="https://store.jacarandarecords.com/collections/pre-orders/products/courds-eyes" target="_blank" rel="noopener" style="display:block;">
-          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0c;">
+          <div class="merch-img" style="aspect-ratio:1; background:#0a0a0a;">
             <img src="images/eyesvinyl.png" alt="'Eyes' 7-inch Vinyl" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </a>
@@ -1524,14 +1526,14 @@
       });
       if (res.ok || res.status === 200) {
         msg.textContent = 'You\'re in — thanks!';
-        msg.style.color = '#6dbf6d';
+        msg.style.color = '#ffffff';
         this.querySelector('input').value = '';
       } else {
         throw new Error();
       }
     } catch {
       msg.textContent = 'Something went wrong — try again.';
-      msg.style.color = '#c84040';
+      msg.style.color = '#9a9a9a';
     }
     btn.disabled = false;
     btn.textContent = 'Subscribe';
